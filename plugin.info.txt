@@ -3,5 +3,5 @@ author  Mark C. Prins
 email   mprins@users.sf.net
 date    ${buildNumber} (${project.version})
 name    ${project.name}
-desc    ${project.description}. Provides geoPHP version: ${geophp.checkout.versiontype} ${geophp.checkout.version}
+desc    ${project.description}. Provides geoPHP version: ${geophp.checkout.versiontype}, ${geophp.checkout.version} from ${geophp.checkout.url}.
 url     ${project.url}
