@@ -28,7 +28,7 @@ include_once('geoPHP/geoPHP.inc');
  */
 class helper_plugin_geophp extends DokuWiki_Plugin {
 
-    public function getMethods() {
+    public function getMethods(): array {
         // no methods, just a loader.
         return array();
     }
