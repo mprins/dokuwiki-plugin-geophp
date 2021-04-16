@@ -1,4 +1,6 @@
 <?php
+// phpcs:disable Squiz.Classes.ValidClassName.NotCamelCaps
+// phpcs:disable PSR1.Files.SideEffects
 /*
  * Copyright (c) 2012-2013 Mark C. Prins <mprins@users.sf.net>
  *
@@ -13,10 +15,12 @@
  * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
  * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+ *
  */
-if (!defined('DOKU_INC')) die();
 
+// side effect
 include_once('geoPHP/geoPHP.inc');
+
 /**
  * DokuWiki Plugin geophp (Helper Component). This pseudohelper provides access to geoPHP.
  *
@@ -24,8 +28,8 @@ include_once('geoPHP/geoPHP.inc');
  */
 class helper_plugin_geophp extends DokuWiki_Plugin {
 
-	function getMethods(){
-		// no methods, just a loader.
-		return array();
-	}
+    public function getMethods() {
+        // no methods, just a loader.
+        return array();
+    }
 }
