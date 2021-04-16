@@ -1,7 +1,7 @@
-base    ${project.artifactId}
+base    geophp
 author  Mark C. Prins
 email   mprins@users.sf.net
-date    ${buildNumber} (${project.version})
-name    ${project.name}
-desc    ${project.description}. Provides geoPHP version: ${geophp.checkout.versiontype}, ${geophp.checkout.version} from ${geophp.checkout.url}.
-url     ${project.url}
+date    2021-04-16
+name    geoPHP plugin for DokuWiki
+desc    Provides access to the geoPHP library available at http://geophp.net. Provides geoPHP version: branch, master from scm:git:https://github.com/mprins/geoPHP.git.
+url     http://www.dokuwiki.org/plugin:geophp

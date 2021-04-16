@@ -1,12 +1,12 @@
-${project.name}
+geoPHP plugin for DokuWiki
 
-${project.description}
+Provides access to the geoPHP library available at http://geophp.net
 
 All documentation for this plugin can be found at
-${project.url}
+http://www.dokuwiki.org/plugin:geophp
 
 If you install this plugin manually, make sure it is installed in
-lib/plugins/${project.artifactId}/ - if the folder is called different it
+lib/plugins/geophp/ - if the folder is called different it
 will not work!
 
 Please refer to http://www.dokuwiki.org/plugins for additional info
@@ -15,7 +15,7 @@ on how to install plugins in DokuWiki.
 This project includes part of geoPHP.
 
 ----
-  Copyright (c) 2012-2015 Mark C. Prins <mprins@users.sf.net>
+  Copyright (c) 2012-2021 Mark C. Prins <mprins@users.sf.net>
 
   Permission to use, copy, modify, and distribute this software for any
   purpose with or without fee is hereby granted, provided that the above
