@@ -1,0 +1,22 @@
+{
+  "name": "mprins/dokuwiki-plugin-geophp",
+  "description": "geoPHP plugin for DokuWiki",
+  "type": "plugin",
+  "license": "GPL v2",
+  "authors": [
+    {
+      "name": "mprins",
+      "email": "mprins@users.sf.net"
+    }
+  ],
+  "config": {
+    "platform": {
+      "php": "8.0"
+    }
+  },
+  "require": {
+    "php": ">=7.4",
+    "funiq/geophp": "^2"
+  },
+  "prefer-stable": true
+}
