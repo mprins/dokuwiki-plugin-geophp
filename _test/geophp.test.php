@@ -15,8 +15,6 @@
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
-use geoPHP\geoPHP;
-
 /**
  * General tests for the geophp plugin
  *
@@ -28,34 +26,32 @@ class geophp_plugin_geophp_test extends DokuWikiTest {
 
     protected $pluginsEnabled = array('geophp');
 
-    final public function setUp(): void
-    {
+    final public function setUp(): void {
         parent::setUp();
 
         global $conf;
         $conf['allowdebug'] = 1;
         $conf['cachetime']  = -1;
 
-        if ($conf['allowdebug']) {
+        if($conf['allowdebug']) {
             touch(DOKU_TMP_DATA . 'cache/debug.log');
         }
 
         plugin_load('helper', 'geophp');
     }
 
-    public function test_geophp_load(){
-        $polygon = geoPHP::load('POLYGON((1 1,5 1,5 5,1 5,1 1),(2 2,2 3,3 3,3 2,2 2))','wkt');
-        $this->assertEquals("Polygon",$polygon->geometryType());
+    public function test_geophp_load() {
+        $polygon = geoPHP\geoPHP::load('POLYGON((1 1,5 1,5 5,1 5,1 1),(2 2,2 3,3 3,3 2,2 2))', 'wkt');
+        $this->assertEquals("Polygon", $polygon->geometryType());
         $this->assertEquals(15.0, $polygon->getArea());
     }
 
-    final protected function tearDown(): void
-    {
+    final protected function tearDown(): void {
         parent::tearDown();
 
         global $conf;
         // try to get the debug log after running the test, print and clear
-        if ($conf['allowdebug']) {
+        if($conf['allowdebug']) {
             print "\n";
             readfile(DOKU_TMP_DATA . 'cache/debug.log');
             unlink(DOKU_TMP_DATA . 'cache/debug.log');

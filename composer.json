@@ -1,6 +1,7 @@
 {
   "name": "mprins/dokuwiki-plugin-geophp",
   "description": "geoPHP plugin for DokuWiki",
+  "homepage": "https://www.dokuwiki.org/plugin:geophp",
   "type": "plugin",
   "license": "GPL v2",
   "authors": [
