@@ -41,7 +41,7 @@ class BinaryReader
 //          $this->buffer = fopen($input, 'r+');
 //      } else {
             $this->buffer = fopen('php://memory', 'x+');
-            fwrite($this->buffer, $input);
+            fwrite($this->buffer, (string) $input);
             fseek($this->buffer, 0);
 //      }
     }

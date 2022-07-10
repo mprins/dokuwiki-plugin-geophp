@@ -29,6 +29,6 @@ class UnsupportedMethodException extends \Exception
      */
     public static function geos($methodName)
     {
-        return new self($methodName, null, 'Please install GEOS extension.');
+        return new self($methodName, 0, 'Please install GEOS extension.');
     }
 }

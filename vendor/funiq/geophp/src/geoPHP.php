@@ -339,6 +339,7 @@ class geoPHP
      */
     public static function detectFormat(&$input)
     {
+        $input = (string) $input;
         $mem = fopen('php://memory', 'x+');
         fwrite($mem, $input, 11); // Write 11 bytes - we can detect the vast majority of formats in the first 11 bytes
         fseek($mem, 0);
@@ -362,7 +363,7 @@ class geoPHP
             $wkbType = current(unpack($bytes[1] == 1 ? 'V' : 'N', substr($bin, 1, 4)));
             if (array_search($wkbType & 0xF, Adapter\WKB::$typeMap)) {
                 // If SRID byte is TRUE (1), it's EWKB
-                if ($wkbType & Adapter\WKB::SRID_MASK == Adapter\WKB::SRID_MASK) {
+                if (($wkbType & Adapter\WKB::SRID_MASK) === Adapter\WKB::SRID_MASK) {
                     return 'ewkb';
                 } else {
                     return 'wkb';
