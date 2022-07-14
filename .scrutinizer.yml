@@ -1,3 +1,8 @@
 filter:
   dependency_paths:
-    - geoPHP/
+    - vendor/
+
+build:
+  environment:
+    php:
+      version: 8.0

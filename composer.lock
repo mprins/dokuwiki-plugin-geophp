@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d5196fe40d68a1c440bb1d7a0a86be7d",
+    "content-hash": "da6664cab8b85c237cbb3f1bc30f7c3d",
     "packages": [
         {
             "name": "funiq/geophp",
@@ -81,7 +81,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": [],
-    "prefer-stable": true,
+    "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
         "php": ">=7.4"
