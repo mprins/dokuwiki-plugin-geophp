@@ -18,8 +18,7 @@
  *
  */
 
-// side effect
-include_once('geoPHP/geoPHP.inc');
+require_once __DIR__ . '/vendor/autoload.php';
 
 /**
  * DokuWiki Plugin geophp (Helper Component). This pseudohelper provides access to geoPHP.
