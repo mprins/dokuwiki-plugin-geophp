@@ -8,20 +8,20 @@
     "packages": [
         {
             "name": "funiq/geophp",
-            "version": "v2.0.1",
+            "version": "v2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/funiq/geoPHP.git",
-                "reference": "36a7c20754b648d6943951af3024ec75e7ff78b2"
+                "reference": "7e7a9a47640a48bb8a5682d429d62dc01c47bf92"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/funiq/geoPHP/zipball/36a7c20754b648d6943951af3024ec75e7ff78b2",
-                "reference": "36a7c20754b648d6943951af3024ec75e7ff78b2",
+                "url": "https://api.github.com/repos/funiq/geoPHP/zipball/7e7a9a47640a48bb8a5682d429d62dc01c47bf92",
+                "reference": "7e7a9a47640a48bb8a5682d429d62dc01c47bf92",
                 "shasum": ""
             },
             "require": {
-                "php": "5.5 - 8.0"
+                "php": "5.5 - 8.1"
             },
             "require-dev": {
                 "php": "5.5 - 8.1",
@@ -72,9 +72,9 @@
             ],
             "support": {
                 "issues": "https://github.com/funiq/geoPHP/issues",
-                "source": "https://github.com/funiq/geoPHP/tree/v2.0.1"
+                "source": "https://github.com/funiq/geoPHP/tree/v2.0.2"
             },
-            "time": "2022-07-08T14:56:59+00:00"
+            "time": "2022-09-01T12:16:04+00:00"
         }
     ],
     "packages-dev": [],
@@ -90,5 +90,5 @@
     "platform-overrides": {
         "php": "8.0"
     },
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.3.0"
 }
