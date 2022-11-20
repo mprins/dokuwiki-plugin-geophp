@@ -13,7 +13,7 @@
   ],
   "require": {
     "php": ">=7.4",
-    "funiq/geophp": "^2"
+    "funiq/geophp": "^2.0"
   },
   "config": {
     "platform": {
