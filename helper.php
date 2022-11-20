@@ -2,7 +2,7 @@
 // phpcs:disable Squiz.Classes.ValidClassName.NotCamelCaps
 // phpcs:disable PSR1.Files.SideEffects
 /*
- * Copyright (c) 2012-2013 Mark C. Prins <mprins@users.sf.net>
+ * Copyright (c) 2012-2022 Mark C. Prins <mprins@users.sf.net>
  *
  * Permission to use, copy, modify, and distribute this software for any
  * purpose with or without fee is hereby granted, provided that the above
@@ -27,7 +27,7 @@ require_once __DIR__ . '/vendor/autoload.php';
  */
 class helper_plugin_geophp extends DokuWiki_Plugin {
 
-    public function getMethods(): array {
+    final public function getMethods(): array {
         // no methods, just a loader.
         return array();
     }
