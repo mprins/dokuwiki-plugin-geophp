@@ -45,7 +45,7 @@ class action_plugin_geophp extends DokuWiki_Plugin {
      */
     final public function popularity(Doku_Event $event): void {
         global $updateVersion;
-        $geoPHP                                   = InstalledVersions::getPrettyVersion('phayes/geophp');
+        $geoPHP                                   = InstalledVersions::getPrettyVersion('funiq/geophp');
         $plugin_info                              = $this->getInfo();
         $event->data['geophp']['version']         = $plugin_info['date'];
         $event->data['geophp']['geophp']          = $geoPHP;
