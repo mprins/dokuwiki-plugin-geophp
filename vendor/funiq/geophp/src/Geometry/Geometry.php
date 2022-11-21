@@ -284,7 +284,7 @@ abstract class Geometry
         if ($this->getGeos()) {
             // @codeCoverageIgnoreStart
             /** @noinspection PhpUndefinedMethodInspection */
-            $this->getGeos()->setSRID($srid);
+            $this->getGeos()->setSRID((int) $srid);
             // @codeCoverageIgnoreEnd
         }
         $this->srid = $srid;
