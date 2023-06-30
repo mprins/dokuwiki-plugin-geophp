@@ -19,3 +19,12 @@ geoPHP/lib/geometry/MultiPoint.class.php
 geoPHP/lib/geometry/MultiPolygon.class.php
 geoPHP/lib/geometry/Point.class.php
 geoPHP/lib/geometry/Polygon.class.php
+
+_test/action.test.php
+_test/general.test.php
+
+.github/workflows/phpCS.yml
+.github/workflows/maintenance.yml
+.github/workflows/CI.yml
+.github/dependabot.yml
+.github/ISSUE_TEMPLATE.md
