@@ -27,29 +27,31 @@ require_once __DIR__ . '/vendor/autoload.php';
  *
  * @author Mark Prins
  */
-class action_plugin_geophp extends DokuWiki_Plugin {
+class action_plugin_geophp extends DokuWiki_Plugin
+{
     /**
      * plugin should use this method to register its handlers with the DokuWiki's event controller
      *
      * @param    $controller DokuWiki's event controller object. Also available as global $EVENT_HANDLER
      */
-    final public function register(Doku_Event_Handler $controller): void {
+    final public function register(Doku_Event_Handler $controller): void
+    {
         $controller->register_hook('PLUGIN_POPULARITY_DATA_SETUP', 'AFTER', $this, 'popularity');
     }
 
     /**
-     * add popularity data for this plugin.
+     * Produce popularity data for this plugin.
      *
-     * @param Doku_Event $event
-     *          the DokuWiki event
+     * @param Doku_Event $event The DokuWiki event
      */
-    final public function popularity(Doku_Event $event): void {
-        global $updateVersion;
-        $geoPHP                                   = InstalledVersions::getPrettyVersion('funiq/geophp');
-        $plugin_info                              = $this->getInfo();
-        $event->data['geophp']['version']         = $plugin_info['date'];
-        $event->data['geophp']['geophp']          = $geoPHP;
-        $event->data['geophp']['dwversion']       = $updateVersion;
-        $event->data['geophp']['combinedversion'] = $updateVersion . '_' . $plugin_info['date'] . '_' . $geoPHP;
+    final public function popularity(Doku_Event $event): void
+    {
+        $versionInfo = getVersionData();
+        $geoPHP = InstalledVersions::getPrettyVersion('funiq/geophp');
+        $plugin_info = $this->getInfo();
+        $event->data['geophp']['version'] = $plugin_info['date'];
+        $event->data['geophp']['geophp'] = $geoPHP;
+        $event->data['geophp']['dwversion'] = $versionInfo['date'];
+        $event->data['geophp']['combinedversion'] = $versionInfo['date'] . '_' . $plugin_info['date'] . '_' . $geoPHP;
     }
 }
