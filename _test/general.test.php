@@ -22,14 +22,16 @@
  * @group plugin_dokuwikispatial
  * @group plugins
  */
-class general_plugin_geophp_test extends DokuWikiTest {
+class general_plugin_geophp_test extends DokuWikiTest
+{
 
     protected $pluginsEnabled = array('geophp');
 
     /**
      * Simple test to make sure the plugin.info.txt is in correct format
      */
-    public function test_plugininfo() {
+    final public function test_plugininfo(): void
+    {
         $file = __DIR__ . '/../plugin.info.txt';
         $this->assertFileExists($file);
 
@@ -53,7 +55,8 @@ class general_plugin_geophp_test extends DokuWikiTest {
     /**
      * test if plugin is loaded.
      */
-    public function test_plugin_geophp_isloaded() {
+    final public function test_plugin_geophp_isloaded(): void
+    {
         global $plugin_controller;
         $this->assertContains(
             'geophp', $plugin_controller->getList(), "geophp plugin is loaded"
