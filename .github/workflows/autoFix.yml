@@ -1,9 +1,11 @@
 name: "Auto-Fix code"
+# see: https://github.com/dokuwiki/github-action/blob/main/.github/workflows/autofix.yml
 
 on:
   push:
     branches:
       - autofix
+      - master
 
 permissions:
   contents: write
@@ -40,19 +42,13 @@ jobs:
         run: rector process --config _test/rector.php --no-diffs
 
       - name: Run PHP CodeSniffer autofixing
-        continue-on-error: true # even if not all errors are fixed, we want to create a PR
+        continue-on-error: true
         run: phpcbf --standard=_test/phpcs_MigrationAdjustments.xml
-
-      - name: debugging
-        run: |
-          pwd
-          ls -l
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
         with:
-          base: 'autofix'
-          path: 'lib/plugins/geophp/'
+          path: ${{ steps.dokuwiki-env.outputs.dir }}
           commit-message: "🤖 Rector and PHPCS fixes"
           title: "🤖 Automatic code style fixes"
           body: |
@@ -63,8 +59,3 @@ jobs:
             If you disagree with the changes, simply clean the code yourself and create a new pull request. This PR automatically closes when no more changes are suggested by rector and phpcbf.
           delete-branch: true
           branch: "bot/autofix"
-
-      #- name: autofix
-      #  uses: dokuwiki/github-action/.github/workflows/autofix.yml@main
-      #  with:
-      #    rector-php: '8.2'
