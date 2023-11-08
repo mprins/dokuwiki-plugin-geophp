@@ -43,9 +43,16 @@ jobs:
         continue-on-error: true # even if not all errors are fixed, we want to create a PR
         run: phpcbf --standard=_test/phpcs_MigrationAdjustments.xml
 
+      - name: debugging
+        run:
+          - pwd
+          - ls -l
+
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
         with:
+          base: 'autofix'
+          path: 'lib/plugins/geophp/'
           commit-message: "🤖 Rector and PHPCS fixes"
           title: "🤖 Automatic code style fixes"
           body: |
