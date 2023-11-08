@@ -1,4 +1,5 @@
 <?php
+
 // phpcs:disable Squiz.Classes.ValidClassName.NotCamelCaps
 // phpcs:disable PSR1.Files.SideEffects
 /*
@@ -17,7 +18,9 @@
 * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 *
 */
-
+use dokuwiki\Extension\Plugin;
+use dokuwiki\Extension\EventHandler;
+use dokuwiki\Extension\Event;
 use Composer\InstalledVersions;
 
 require_once __DIR__ . '/vendor/autoload.php';
@@ -27,14 +30,14 @@ require_once __DIR__ . '/vendor/autoload.php';
  *
  * @author Mark Prins
  */
-class action_plugin_geophp extends DokuWiki_Plugin
+class action_plugin_geophp extends Plugin
 {
     /**
      * plugin should use this method to register its handlers with the DokuWiki's event controller
      *
      * @param    $controller DokuWiki's event controller object. Also available as global $EVENT_HANDLER
      */
-    final public function register(Doku_Event_Handler $controller): void
+    final public function register(EventHandler $controller): void
     {
         $controller->register_hook('PLUGIN_POPULARITY_DATA_SETUP', 'AFTER', $this, 'popularity');
     }
@@ -44,7 +47,7 @@ class action_plugin_geophp extends DokuWiki_Plugin
      *
      * @param Doku_Event $event The DokuWiki event
      */
-    final public function popularity(Doku_Event $event): void
+    final public function popularity(Event $event): void
     {
         $versionInfo = getVersionData();
         $geoPHP = InstalledVersions::getPrettyVersion('funiq/geophp');

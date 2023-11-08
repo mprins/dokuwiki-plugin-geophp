@@ -1,4 +1,7 @@
 <?php
+
+use dokuwiki\Extension\Plugin;
+
 // phpcs:disable Squiz.Classes.ValidClassName.NotCamelCaps
 // phpcs:disable PSR1.Files.SideEffects
 /*
@@ -25,11 +28,11 @@ require_once __DIR__ . '/vendor/autoload.php';
  *
  * @author Mark Prins
  */
-class helper_plugin_geophp extends DokuWiki_Plugin
+class helper_plugin_geophp extends Plugin
 {
     final public function getMethods(): array
     {
         // no methods, just a loader.
-        return array();
+        return [];
     }
 }
