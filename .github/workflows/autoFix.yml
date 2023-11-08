@@ -45,8 +45,8 @@ jobs:
 
       - name: debugging
         run: |
-          - pwd
-          - ls -l
+          pwd
+          ls -l
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
