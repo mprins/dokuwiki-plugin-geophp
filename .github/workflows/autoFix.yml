@@ -36,28 +36,28 @@ jobs:
           path: _test/.rector-cache
           key: ${{ runner.os }}-rector-${{ hashFiles('_test/rector.php') }}
 
-      # - name: Run Rector
-      #   run: rector process --config _test/rector.php --no-diffs
+      - name: Run Rector
+        run: rector process --config _test/rector.php --no-diffs
 
-      # - name: Run PHP CodeSniffer autofixing
-      #   continue-on-error: true # even if not all errors are fixed, we want to create a PR
-      #   run: phpcbf --standard=_test/phpcs_MigrationAdjustments.xml
+      - name: Run PHP CodeSniffer autofixing
+        continue-on-error: true # even if not all errors are fixed, we want to create a PR
+        run: phpcbf --standard=_test/phpcs_MigrationAdjustments.xml
 
-      # - name: Create Pull Request
-      #   uses: peter-evans/create-pull-request@v5
-      #   with:
-      #     commit-message: "🤖 Rector and PHPCS fixes"
-      #     title: "🤖 Automatic code style fixes"
-      #     body: |
-      #       These changes were made automatically by running rector and phpcbf.
-
-      #       Please carefully check the changes before merging. Please note that unit tests are not run for automated pull requests - so if in doubt, manually test the branch before merging.
-
-      #       If you disagree with the changes, simply clean the code yourself and create a new pull request. This PR automatically closes when no more changes are suggested by rector and phpcbf.
-      #     delete-branch: true
-      #     branch: "bot/autofix"
-
-      - name: autofix
-        uses: dokuwiki/github-action/.github/workflows/autofix.yml@main
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
         with:
-          rector-php: '8.2'
+          commit-message: "🤖 Rector and PHPCS fixes"
+          title: "🤖 Automatic code style fixes"
+          body: |
+            These changes were made automatically by running rector and phpcbf.
+
+            Please carefully check the changes before merging. Please note that unit tests are not run for automated pull requests - so if in doubt, manually test the branch before merging.
+
+            If you disagree with the changes, simply clean the code yourself and create a new pull request. This PR automatically closes when no more changes are suggested by rector and phpcbf.
+          delete-branch: true
+          branch: "bot/autofix"
+
+      #- name: autofix
+      #  uses: dokuwiki/github-action/.github/workflows/autofix.yml@main
+      #  with:
+      #    rector-php: '8.2'
