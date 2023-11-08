@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - master
-      - geophp-203
 
 jobs:
   autofix:

@@ -1,7 +1,6 @@
 <?php
 // phpcs:disable Squiz.Classes.ValidClassName.NotCamelCaps
 // phpcs:disable PSR1.Files.SideEffects
-
 /*
  * Copyright (c) 2012 Mark C. Prins <mprins@users.sf.net>
  *
