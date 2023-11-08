@@ -27,7 +27,6 @@ require_once __DIR__ . '/vendor/autoload.php';
  */
 class helper_plugin_geophp extends DokuWiki_Plugin
 {
-
     final public function getMethods(): array
     {
         // no methods, just a loader.

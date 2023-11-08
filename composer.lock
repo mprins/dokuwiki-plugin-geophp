@@ -8,23 +8,23 @@
     "packages": [
         {
             "name": "funiq/geophp",
-            "version": "v2.0.2",
+            "version": "v2.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/funiq/geoPHP.git",
-                "reference": "7e7a9a47640a48bb8a5682d429d62dc01c47bf92"
+                "reference": "82a8f112463f5e9d8dc7664fcd9ee61ce8c50547"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/funiq/geoPHP/zipball/7e7a9a47640a48bb8a5682d429d62dc01c47bf92",
-                "reference": "7e7a9a47640a48bb8a5682d429d62dc01c47bf92",
+                "url": "https://api.github.com/repos/funiq/geoPHP/zipball/82a8f112463f5e9d8dc7664fcd9ee61ce8c50547",
+                "reference": "82a8f112463f5e9d8dc7664fcd9ee61ce8c50547",
                 "shasum": ""
             },
             "require": {
-                "php": "5.5 - 8.1"
+                "php": "5.5 - 8.2"
             },
             "require-dev": {
-                "php": "5.5 - 8.1",
+                "php": "5.5 - 8.3",
                 "php-coveralls/php-coveralls": "2.*",
                 "phpstan/phpstan": "^0.12.18",
                 "phpunit/phpunit": "5.* || 8.*",
@@ -72,9 +72,9 @@
             ],
             "support": {
                 "issues": "https://github.com/funiq/geoPHP/issues",
-                "source": "https://github.com/funiq/geoPHP/tree/v2.0.2"
+                "source": "https://github.com/funiq/geoPHP/tree/v2.0.3"
             },
-            "time": "2022-09-01T12:16:04+00:00"
+            "time": "2023-11-08T09:37:12+00:00"
         }
     ],
     "packages-dev": [],
@@ -90,5 +90,5 @@
     "platform-overrides": {
         "php": "8.0"
     },
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.3.0"
 }
