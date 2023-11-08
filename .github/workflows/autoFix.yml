@@ -4,7 +4,6 @@ name: "Auto-Fix code"
 on:
   push:
     branches:
-      - autofix
       - master
 
 permissions:
