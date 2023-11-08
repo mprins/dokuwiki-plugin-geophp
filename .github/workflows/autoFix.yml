@@ -58,6 +58,6 @@ jobs:
       #     branch: "bot/autofix"
 
       - name: autofix
-        uses: dokuwiki/github-action/.github/autofix.yml@main
+        uses: dokuwiki/github-action/.github/workflows/autofix.yml@main
         with:
           rector-php: '8.2'
