@@ -1,60 +1,12 @@
-name: "Auto-Fix code"
-# see: https://github.com/dokuwiki/github-action/blob/main/.github/workflows/autofix.yml
+name: AutoFix
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - master
 
-permissions:
-  contents: write
-  pull-requests: write
-
 jobs:
-  autofix:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: '8.2'
-          tools: phpcbf, rector
-
-      - name: Create DokuWiki Environment
-        id: dokuwiki-env
-        uses: dokuwiki/github-action/.github/actions/dokuenv@main
-        with:
-          branch: master
-
-      - name: Setup Cache
-        uses: actions/cache@v3
-        with:
-          path: _test/.rector-cache
-          key: ${{ runner.os }}-rector-${{ hashFiles('_test/rector.php') }}
-
-      - name: Run Rector
-        run: rector process --config _test/rector.php --no-diffs
-
-      - name: Run PHP CodeSniffer autofixing
-        continue-on-error: true
-        run: phpcbf --standard=_test/phpcs_MigrationAdjustments.xml
-
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v5
-        with:
-          path: ${{ steps.dokuwiki-env.outputs.dir }}
-          commit-message: "🤖 Rector and PHPCS fixes"
-          title: "🤖 Automatic code style fixes"
-          body: |
-            These changes were made automatically by running rector and phpcbf.
-
-            Please carefully check the changes before merging. Please note that unit tests are not run for automated pull requests - so if in doubt, manually test the branch before merging.
-
-            If you disagree with the changes, simply clean the code yourself and create a new pull request. This PR automatically closes when no more changes are suggested by rector and phpcbf.
-          delete-branch: true
-          branch: "bot/autofix"
+  release:
+    name: AutoFix
+    uses: mprins/.github/.github/workflows/autoFix.yml@main
