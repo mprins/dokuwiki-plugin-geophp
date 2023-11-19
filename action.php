@@ -45,7 +45,7 @@ class action_plugin_geophp extends Plugin
     /**
      * Produce popularity data for this plugin.
      *
-     * @param Doku_Event $event The DokuWiki event
+     * @param Event $event The DokuWiki event
      */
     final public function popularity(Event $event): void
     {
