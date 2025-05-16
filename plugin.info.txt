@@ -1,7 +1,8 @@
 base    geophp
 author  Mark C. Prins
 email   mprins@users.sf.net
-date    2023-11-08
+date    2025-05-16
 name    geoPHP plugin for DokuWiki
 desc    Provides access to the geoPHP library available at https://github.com/funiq/geoPHP.
 url     https://www.dokuwiki.org/plugin:geophp
+minphp 8.0

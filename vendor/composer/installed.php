@@ -3,7 +3,7 @@
         'name' => 'mprins/dokuwiki-plugin-geophp',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '3900cc2fd02c01677834da81273c6846ab6cb6bb',
+        'reference' => '29bc4b5067a8f29fe9bf24c2feb82553e8c62172',
         'type' => 'plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -22,7 +22,7 @@
         'mprins/dokuwiki-plugin-geophp' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '3900cc2fd02c01677834da81273c6846ab6cb6bb',
+            'reference' => '29bc4b5067a8f29fe9bf24c2feb82553e8c62172',
             'type' => 'plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
